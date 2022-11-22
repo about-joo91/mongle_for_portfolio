@@ -88,7 +88,7 @@ AWS ec2를 활용한 배포
 
 ### 계속 이어질 뻔했던 분기문을 이분탐색으로 깔끔하게!
 
-```
+```python
 ## 이전 코드
 if 0 <= grade < 200:
   mongle_level = 1
@@ -117,7 +117,7 @@ def update_mongle_level(cur_grade: int) -> int:
 
 리뷰를 쓸 때마다 점수가 올라가야 했고 이때 리뷰는 써졌으나 점수는 올라가지 않는 상황을 상정하여 atomic 데코레이터를 통해 이를 방지하였습니다.
 
-```
+```python
 
 @transaction.atomic
 def create_letter_review(user: UserModel, letter_id: int, review_data: dict[str, str]) -> None:
